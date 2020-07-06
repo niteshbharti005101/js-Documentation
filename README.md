@@ -9,3 +9,16 @@
 * ECMA SCRIPT -2018 is the latest version (`ES-9`)
 * For implementing high end JS modules, We've to focus on `ES-6`.
 
+### Data types
+* Number
+* String
+* Boolean
+* Function
+* Object
+* null
+* undefined
+
+### Convertion functions
+* Number()
+* parseInt()
+* parseFloat()
