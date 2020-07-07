@@ -86,9 +86,20 @@
 * Function without name (**Anonymous functions**)
 ```javascript
 	var object=function(a,b){
-	return a*b;
+		return a*b;
 	}
 
 	object(3,4)
-Output: 12
+	_______
+	Output: 12
+```
+* Arrow functions
+```javascript
+	var multiply=(x,y)=>{
+		return (x*y)
+	}
+
+	multiply(5,6);
+	______
+	Output: 30
 ```
