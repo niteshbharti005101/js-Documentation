@@ -36,8 +36,8 @@
   ```javascript
     confirm("Are you sure?");
   ```
-    Example:
-      ```javascript
+  Example:
+   ```javascript
         if(confirm("Are you sure?")==true){
 	        console.log("Clicked on okay");
         } else {
