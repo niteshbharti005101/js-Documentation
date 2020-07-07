@@ -61,3 +61,25 @@
 ```javascript
 	console.error("Oops! this is error2");
 ```
+
+### Functions:
+* Functions without parameters (static functions):
+```javascript
+	// defining a function
+	function add(){
+		var a=1;
+		var b=2;
+		return a+b;
+	}
+
+	//Calling the above function
+	add()
+```
+* Functions with parameters (Dynamic functions)
+```javascript
+	function multiply(x,y){
+		return x*y;
+	}
+
+	multiply(2,3)
+```
