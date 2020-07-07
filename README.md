@@ -43,4 +43,21 @@
         } else {
 	        console.log("Clicked on cancel");
         }
-      ```
+   ```
+### Console statements
+* console.log()
+```javascript
+	console.log("This is for displaying an output");
+```
+* console.info()
+```javascript
+	console.info("This is also for displaying the output");
+```
+* console.warn()
+```javascript
+	console.warn("This is a warning");
+```
+* console.error()
+```javascript
+	console.error("Oops! this is error2");
+```
