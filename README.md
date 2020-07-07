@@ -83,3 +83,12 @@
 
 	multiply(2,3)
 ```
+* Function without name (**Anonymous functions**)
+```javascript
+	var object=function(a,b){
+	return a*b;
+	}
+
+	object(3,4)
+Output: 12
+```
