@@ -22,3 +22,25 @@
 * Number()
 * parseInt()
 * parseFloat()
+
+### Alerts in JavaScript
+* alert()
+  ```javascript
+      alert("Hi");
+  ```
+* prompt()
+  ```javascript
+      prompt("Enter your name");
+  ```
+* confirm()
+  ```javascript
+    confirm("Are you sure?");
+  ```
+    Example:
+      ```javascript
+        if(confirm("Are you sure?")==true){
+	        console.log("Clicked on okay");
+        } else {
+	        console.log("Clicked on cancel");
+        }
+      ```
