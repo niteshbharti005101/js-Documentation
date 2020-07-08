@@ -103,3 +103,37 @@
 	______
 	Output: 30
 ```
+
+### Array iteration using map,for-in and for-of
+* **Map()**
+	* Syntax:
+```javascript
+	arrayName.map({arrow function})
+```
+
+* Example
+```javascript
+	var names=["mark zukerburg","Jack dorsey","Tim","Jack ma"];
+	// iter holds the values and index holds the index values of an array
+	names.map((iter,index)=>{
+		console.log(iter);
+		console.log(index);
+	})
+```
+
+* for-in
+```javascript
+	var names=["mark zukerburg","Jack dorsey","Tim","Jack ma"];
+	for(i in names){
+		console.log(i);
+	}
+```
+	
+* for-of
+	
+```javascript
+	var names=["mark zukerburg","Jack dorsey","Tim","Jack ma"];
+	for(i of names){
+		console.log(i);
+	}
+	```
