@@ -142,10 +142,18 @@
 * We've to use script tags for taht (`<script> </script>`)
 * By using `document` keyword, We can manipulate the data in html document.
 * Document object model functions are:
-	* `document.getElementById("id");`
-	* Collections
-		* `document.getElementsByClassName("className");`
-		* `document.getElementsByTagName("Tag name");`
-	* Common statements for DOM
-		* `document.querySelector("#selector | .selector | Tag Name Selector");`
-		* `document.querySelectorAll(".selector | Tag Name Selector");`
+```javascript
+		document.getElementById("id");
+```
+
+* Collections
+```javascript
+		document.getElementsByClassName("className");
+		document.getElementsByTagName("Tag name");
+```
+
+* Common statements for DOM
+```javascript
+		document.querySelector("#selector | .selector | Tag Name Selector");
+		document.querySelectorAll(".selector | Tag Name Selector");
+```
