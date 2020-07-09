@@ -244,3 +244,10 @@ Objects in Object:
 	Output: Swetha
 ```
 
+### JSON
+* **J**ava **S**cript **O**bject **N**otation
+* Light weight data-interchange format (This is a format to trnsfer information between the nodes)
+* This is very easy to read,understand and write.
+* This is very easy for the machines to parse and generate data.
+* This is subset of `javascript programming language standards (ECMA SCRIPT - 262)`.
+
