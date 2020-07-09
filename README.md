@@ -177,3 +177,24 @@ Example:
 	document.getElementById("second").innerHTML="Hello everyone";
 ```
 
+**Creating and appending HTML attributes**
+We can create the html attributes by using javascript code part also. For that we need to use `document.createElement`. And we can append the information into the created elements by using `textContent`.
+
+Syntax:
+```javascript
+	document.createElement("html tagname")
+```
+
+Example:
+```javascript
+	//Selecting a section from html;
+	var secondDiv=document.getElementById("second");
+	
+	// Creating a html attribute
+	var heading2=document.createElement("h2");
+	heading2.textContent="heading";
+	
+	//Appending child attribute to parent
+	secondDiv.appendChild(heading2);
+```
+
