@@ -157,3 +157,15 @@
 		document.querySelector("#selector | .selector | Tag Name Selector");
 		document.querySelectorAll(".selector | Tag Name Selector");
 ```
+### innerHTML
+`innerHTML` triggers the information exist with in the tags.
+Example:
+```html
+	<div id="second">
+		Sample division
+	</div>
+```
+```javascript
+	var second=document.getElementById("second").innerHTML;
+	console.log(second);
+```
