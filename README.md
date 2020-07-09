@@ -171,3 +171,9 @@ Example:
 	____
 	Output: Sample division
 ```
+
+**Writing information into divisions using `innerHTML`**
+```javascript
+	document.getElementById("second").innerHTML="Hello everyone";
+```
+
