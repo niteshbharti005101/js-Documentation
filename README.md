@@ -198,3 +198,49 @@ Example:
 	secondDiv.appendChild(heading2);
 ```
 
+### Objects in Javascript
+**O**bject is nothing but its a key,value pair. When we going to get the value from an object, we've to use the key of that object
+
+Example:
+```javascript
+	var student={
+		name:"Hemanth sai",
+		role:"Student",
+		branch:"CSE:
+	}
+	__________
+	student.name => Hemanth sai
+```
+Arrays in the object:
+```javascript
+	var student={
+		friends:["sai vasanth","savya sree", "nitesh bharti","venkatesh"]
+	}
+	_____
+	// Here `0` is the index value
+	student.friends[0]
+	______
+	Output: sai vasanth
+	
+	_____
+	student.friends[student.friends.length-1]
+	____
+	Output: Venkatesh
+```
+
+Objects in Object:
+```javascript
+	var student={
+		student1:{
+			name:"Swetha"
+		},
+		student2:{
+			name:"venkatesh"
+		}
+	}
+	______
+	student.student1.name
+	_____
+	Output: Swetha
+```
+
