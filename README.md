@@ -168,4 +168,6 @@ Example:
 ```javascript
 	var second=document.getElementById("second").innerHTML;
 	console.log(second);
+	____
+	Output: Sample division
 ```
