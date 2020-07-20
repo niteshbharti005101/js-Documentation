@@ -246,7 +246,182 @@ Objects in Object:
 
 ### JSON
 * **J**ava **S**cript **O**bject **N**otation
-* Light weight data-interchange format (This is a format to trnsfer information between the nodes).
+* Light weight data-interchange format (This is a format to trnsfer information between the nodes)
 * This is very easy to read,understand and write.
 * This is very easy for the machines to parse and generate data.
 * This is subset of `javascript programming language standards (ECMA SCRIPT - 262)`.
+* For accessing JSON data from a HTML document, we need to use a server.
+	* npm server
+	* web server for chrome (`200 OK`)
+		* Web server for chrome is a static server invented google team. This allows us to access any information from external file into a HTML document.
+		* **Installation of `200 OK`**
+			* _Type **web server for chrome** in your chrome browser_ and press Enter.
+			* _We have to choose web server for chrome from chrome.google.com from listing_.
+			* _We have to click on add to chrome button. Soon after we will see a dialogue box and then click on add app_.
+
+### Promises:
+A promise is an object that may produce a single value some time in the future. The client and the server communicating with eachother, client need to send a request to the server, the server need to respond to the client request simultaniously. This promise give us a value that the is resolved or not resolved.
+The states for the promise are
+* Fulfilled
+* Rejected
+* Pending
+
+The promise is a chine relation, We can build multiple coding blocks.
+The syntax:
+```javascript
+	promise(request).then(response=>{
+		return response;
+	})
+```
+
+Promises examples:
+* Fetch
+* Cache
+
+Example:
+```javascript
+	fetch('data.json').then(response=>{
+		return response.json();
+	}).then(data=>{
+		console.log(data);
+	})
+```
+The promioses concept is the replacement for XMLHttpRequest. The XMLHttpRequest provides a way to communicate with client and server
+
+
+## React
+### Features of React
+* Its a library
+* Virtual DOM : _Its enable us to build scalable and fast applications_.
+* JSX
+* Components
+	* Functional Components (Stateless component)
+	* Class Component (Statefull component)
+	* Pure components
+	* Higher Order Components (HOC's)
+* One way data binding
+
+### States and props in React
+**S**tate provides an ability to store information in the components. With in class component only we can use the state concept. We've to use the constructor method as well as the super method for initializing the state as we need information from the base class. By using `this.state` we can initialize a state. The state should be in object format. 
+
+Syntax:
+```javascript
+	constructor(){
+    		super();
+    		this.state={
+      		name:"Hanuman"
+    		}
+  	}
+```
+
+We can implement the state concept in class component only.
+
+#### But how we are going to implement the state functionality in a functional component ?
+We can implement this by using the concepts called **Hooks**.
+**H**ooks are new feature introduced in React 16.8 version. It allows us to use states and other React features without writing the class. We can implement the hooks in functional components.
+
+Example:
+	**useState**
+	This is for implementing the states concept in functional components.
+	
+Syntax
+```javascript
+	// Importing useState functionality from the base class
+	import React,{useState} from 'react';
+
+	let StatesInFunction=()=>{
+		// Here count is for initializing the value and setCount is for manipulating the initialized value
+    		const [count,setCount]=useState("Bye");
+    		return(
+        		<div>
+				<h2 
+					onMouseOver={()=>setCount("Hi")}
+					onMouseLeave={()=>setCount("Bye")}> {count} 
+				</h2>
+        		</div>
+    			)
+		}
+
+	export default StatesInFunction;
+```
+
+
+Example II :
+```javascript
+	import React,{useState} from 'react';
+
+	let StatesInFunction=()=>{
+    		let initialValue=0;
+    		let [count,setCount]=useState(initialValue);
+    		return(
+        	  <div>
+            		<h2> {count} </h2>
+            		<button onClick={()=>{setCount(count-=-1)}}> Increment </button>
+            		<button onClick={()=>{setCount(count-=1)}}> Decrement </button>
+            		<button onClick={()=>{setCount(count=initialValue)}}> Initial </button>
+        	  </div>
+    		)
+	}
+
+	export default StatesInFunction;
+```
+
+### Props in React
++ **P**rops is a special keyword in React which is used for passing the data from one component to another component.
++ It is uni-directional
++ props data is read-only, which means the data coming from the parent component should not be changed by child components.
++ Props are arguments passed among React components.
+
+Example: (Passing properties (`props`) from class component to a functional component)
+App.js
+```javascript
+	import React,{Component} from 'react';
+	import './App.css';
+	import StatesInFunction from './StatesInFunction';
+	
+	class App extends Component{
+  	
+	render(){
+        return (
+    		<div className="App"> 
+			// Props	
+      			<StatesInFunction name="Nitesh" age="20 years"/>
+
+    		</div>
+    		)
+  	   }
+	}
+
+
+export default App;
+```
+StatesInFunction.js
+```javascript
+	import React from 'react';
+
+	let StatesInFunction=(props)=>{
+    		return(
+        		<div>
+            			<h2> {props.name} is {props.age} </h2>
+            			<h2> {count} </h2>
+        		</div>
+    		)
+	}
+
+	export default StatesInFunction;
+```
+#### But how we are going to access the props in class components
+Here we go with that
+```javascript
+	import React from 'react';
+
+	export default class StatesInFunction extends React.Component{
+    		render(){
+        		return(
+            			<div>
+                			<h2> {this.props.name} is {this.props.age} old. </h2>
+            			</div>
+        		)
+    		}
+	}
+```
